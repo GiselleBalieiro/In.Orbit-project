@@ -5,7 +5,7 @@ import { InOrbitIcon } from "./in-orbit-icon";
 import { Progress, ProgressIndicator } from "./ui/progress-bar";
 import { Separator } from "./ui/separator";
 import dayjs from "dayjs";
-import ptBR from "dayjs/locale/pt-BR";
+import ptBR from "dayjs/locale/pt-br";
 import { useQuery } from "@tanstack/react-query";
 import { getSummary } from "../http/get-summary";
 import { PendingGoals } from "./pending-goals";
