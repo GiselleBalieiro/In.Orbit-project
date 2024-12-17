@@ -6,7 +6,10 @@ type PendingGoalsResponse = {
 }[]
 
 export async function getPendingGoals (): Promise<PendingGoalsResponse> {
-    const response = await fetch ('http://localhost:3333/pending-goals')
+
+    const apiUrl = import.meta.env.VITE_API_URL;
+
+    const response = await fetch (`${apiUrl}/pending-goals`)
     const data = await  response.json()
 
     return data.pendingGoals

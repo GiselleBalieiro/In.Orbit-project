@@ -7,7 +7,10 @@ export async function createGoal({
   title,
   desiredWeeklyFrequency,
 }: CreateGoalRequest) {
-  await fetch("http://localhost:3333/goals", {
+
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  await fetch(`${apiUrl}/goals`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
