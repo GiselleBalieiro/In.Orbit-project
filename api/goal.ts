@@ -1,5 +1,5 @@
 import fastify from "fastify";
-import { createGoalRoute } from "../src/http/routes/create-goal";
+import { createGoalRoute } from "../server/src/http/routes/create-goal";
 
 const app = fastify();
 
