@@ -1,8 +1,17 @@
-import fastify from "fastify";
-import { createGoalRoute } from "../server/src/http/routes/create-goal";
+import { createGoal } from "../server/src/functions/create-goal";
 
-const app = fastify();
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    try {
+      const { title, desiredWeeklyFrequency } = req.body;
 
-app.register(createGoalRoute);
+      await createGoal({ title, desiredWeeklyFrequency });
 
-export default app;
+      return res.status(201).json({ message: "Goal created successfully!" });
+    } catch (error) {
+      console.error("Error creating goal:", error);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+  }
+  return res.status(405).json({ error: "Method Not Allowed" });
+}
