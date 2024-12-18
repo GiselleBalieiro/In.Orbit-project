@@ -1,3 +1,4 @@
+/*
 import type { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
 import { getWeekPendingGoals } from "../../functions/get-week-pending-gols";
 
@@ -8,3 +9,4 @@ export const getPendingGoalsRoute: FastifyPluginAsyncZod = async (app) => {
     return { pendingGoals };
   });
 };
+*/

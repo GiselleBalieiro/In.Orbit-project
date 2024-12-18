@@ -1,4 +1,4 @@
-import fastify from "fastify";
+/*import fastify from "fastify";
 import {
   serializerCompiler,
   validatorCompiler,
@@ -31,3 +31,4 @@ app
   .then(() => {
     console.log("HTTP server running!");
   });
+  */
