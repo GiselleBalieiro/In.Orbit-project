@@ -1,4 +1,3 @@
-/*
 import { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
 import { createGoalCompletion } from "../../functions/create-goal-completions";
 import z from "zod";
@@ -21,4 +20,4 @@ export const createCompletionRoute: FastifyPluginAsyncZod = async (app) => {
       });
     }
   );
-};*/
+};

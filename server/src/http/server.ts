@@ -1,4 +1,4 @@
-/*import fastify from "fastify";
+import fastify from "fastify";
 import {
   serializerCompiler,
   validatorCompiler,
@@ -24,11 +24,11 @@ app.register(createGoalRoute);
 app.register(createCompletionRoute);
 app.register(getWeekSummaryRoutes);
 
-app
-  .listen({
-    port: 3333,
-  })
-  .then(() => {
-    console.log("HTTP server running!");
-  });
-  */
+if (process.env.NODE_ENV !== "production") {
+  app
+    .listen({ port: 3333 })
+    .then(() => {
+      console.log("HTTP server running locally on port 3333!");
+    });
+}
+
