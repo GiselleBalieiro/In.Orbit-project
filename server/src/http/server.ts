@@ -19,10 +19,10 @@ app.register(fastifyCors, {
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
 
-app.register(getPendingGoalsRoute);
-app.register(createGoalRoute);
-app.register(createCompletionRoute);
-app.register(getWeekSummaryRoutes);
+app.register(getPendingGoalsRoute, { prefix: "/api" });
+app.register(createGoalRoute, { prefix: "/api" });
+app.register(createCompletionRoute, { prefix: "/api" });
+app.register(getWeekSummaryRoutes, { prefix: "/api" });
 
 if (process.env.NODE_ENV !== "production") {
   app
